@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
     <style>
         button {
             display: block;
             margin: 10px auto;
+            border: dashed 2px black;
+            font-size: 32px;
         }
 
         div {
@@ -20,41 +23,42 @@
             color: white;
             text-align: center;
             line-height: 30px;
-            border: 2px solid black;
+            border: solid 2px black;
         }
 
         .circle {
-            background-color: azure;
-            border-radius: 50%;
+            background-color: white;
             color: black;
-            border: 2px solid black;
+            border-radius: 50px;
+            border: solid 2px black;
         }
     </style>
+
 </head>
 <body>
-    <button>Create Element</button>
-    
-   <script>
-       const btn = document.querySelector("button");
-       let number = 1;
+    <button>Utwórz Element</button>
 
-       const addElement = function() {
+    <script>
 
-           const div = document.createElement('div');
-           div.textContent = number;
+        const btn = document.querySelector("button");
 
-            if (number%5 == 0) {
-                div.classList.add('circle');
-                console.log("5 element");
-            }
+        let number = 1;
 
-           document.body.appendChild(div);
-           number++;
-           console.log(number);
-       }
-       
-       btn.addEventListener("click", addElement)
+        const addElement = () => {
+            const sqr = document.createElement
+            ("div");
+            sqr.textContent = number;
+            
+            if(number%5 == 0) {
+                sqr.classList.add("circle");
+            };
 
-   </script>
+            document.body.appendChild(sqr);
+            number++;
+        };
+
+        btn.addEventListener('click', addElement);
+
+    </script>
 </body>
 </html>
