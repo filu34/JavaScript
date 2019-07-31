@@ -7,7 +7,7 @@ let getBtnMenu = document.querySelector(".btn-toggle-nav");
 
 let toggleNav = function() {
 
-    if(toggleNavStatus === false) {
+    if(!toggleNavStatus) {
 
         getSidebarUl.style.visibility = "visible";
         getSidebar.style.width = "272px";
@@ -17,7 +17,7 @@ let toggleNav = function() {
             getSidebarLinks[i].style.opacity = "1";
         };
 
-        toggleNavStatus = true;
+        toggleNavStatus = !toggleNavStatus;
     }
 
     else if(toggleNavStatus) {
@@ -31,7 +31,7 @@ let toggleNav = function() {
 
         getSidebarUl.style.visibility = "hidden";
 
-        toggleNavStatus = false;
+        toggleNavStatus = !toggleNavStatus;
     }
 }
 
